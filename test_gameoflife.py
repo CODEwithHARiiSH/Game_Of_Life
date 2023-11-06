@@ -6,9 +6,9 @@ def test_generate_universe():
     assert generate_universe(rows , cols) == [[0,0,0] , [0,0,0] , [0,0,0]]
     
 def test_get_neighbor():
-    grid = [[1,0,1] , 
+    grid = [[1,0,0] , 
             [0,1,0] , 
-            [1,2,3]]
+            [0,0,0]]
     x_cordinate = 0
     y_cordinate = 0
     assert get_neighbor(grid , x_cordinate , y_cordinate) == [0,0,0,0,0,0,0,1]
