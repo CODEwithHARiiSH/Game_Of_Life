@@ -13,9 +13,9 @@ def get_pygame():
     
     window = pygame.display.set_mode((window_height , window_width)) #setting the window
     pygame.display.set_caption("Game of life")
+    grid = generate_universe(rows,cols,randomize=True)
     
     #for creating the window and alive, just like we created the show_display function
-    
     def drawgrid():
         window.fill(background)
         for i in range(rows):
@@ -26,14 +26,13 @@ def get_pygame():
     running = True
     clock = pygame.time.Clock()
     
-    #The grid is inside the loop, so on every time the grid will change. It will be a endless loop.
+    #If you put the grid is inside the loop, so on every time the grid will change. It will be a endless loop.
     #You can put grid outside the loop so it will automatically stop.
     #Clock.tick() is for timing if it stops move curser.
     while running:
         for i in pygame.event.get():
             if i.type == pygame.QUIT:
                 running = False
-            grid = generate_universe(rows,cols,randomize=True)
             drawgrid()
             pygame.display.flip()
         
