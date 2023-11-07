@@ -5,6 +5,13 @@ def test_generate_universe():
     cols = 3
     assert generate_universe(rows , cols,randomize=False) == [[0,0,0] , [0,0,0] , [0,0,0]]
     
+def test_generate_universe_random():
+    rows = 3
+    cols = 3
+    universe = generate_universe(rows , cols,randomize=True)
+    assert len(universe) == 3
+    assert len(universe[0])== 3
+    
 def test_get_neighbor():
     grid = [[1,0,0] , 
             [0,1,0] , 
