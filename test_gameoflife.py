@@ -24,17 +24,17 @@ def test_get_nextGeneration_case1():
     grid = [[1,0,0] , 
             [0,1,0] , 
             [0,0,0]]
-    assert get_nextGeneration(grid) == [[0,0,0] , 
-                                        [0,0,0] , 
+    assert get_nextGeneration(grid) == [[0,1,0] , 
+                                        [1,0,0] , 
                                         [0,0,0]]
     
 def test_get_nextGeneration_case2():
-    grid = [[1,0,1] , 
-            [0,1,0] , 
+    grid = [[1,1,0] , 
+            [1,0,0] , 
             [0,0,0]]
-    assert get_nextGeneration(grid) == [[0,0,0] , 
-                                        [0,1,0] , 
-                                        [0,0,0]]
+    assert get_nextGeneration(grid) == [[1,1,0] , 
+                                        [1,0,0] , 
+                                        [0,0,1]]
        
 def test_get_nextGeneration_case3():
     grid = [[1,0,1] , 
@@ -45,12 +45,12 @@ def test_get_nextGeneration_case3():
                                         [0,0,0]]
        
 
-def test_get_nextGeneration_casedead():
+def test_get_nextGeneration_case4():
     grid = [[1,0,1] , 
             [1,0,0] , 
             [1,1,0]]
     assert get_nextGeneration(grid) == [[0,0,0] , 
-                                        [1,1,0] , 
+                                        [1,1,1] , 
                                         [1,1,0]]
 
 
