@@ -22,8 +22,8 @@ def get_nextGeneration(grid):
         for j in range(len(grid[0])):
             neighbor = get_neighbor(grid,i,j)
             count = sum(neighbor)
-            if grid[i][j] == 1:
-                if count < 2:
+            if grid[i][j]:
+                if count < 2 or count >3:
                     new_generation[i][j] = 0
                 else:
                     new_generation[i][j] = 1
