@@ -55,15 +55,14 @@ def test_get_nextGeneration_case4():
                                         
                                         
 def test_show_display():
-    grid = [[1,0,1] , 
-            [1,0,0] , 
-            [1,1,0]]
+    grid = [[1,1,1] , 
+            [0,0,0] , 
+            [1,0,1]]
             
-    assert show_display(grid) == """
-    * *
-    *  
-    ** """
-
+    assert show_display(grid) == """ *  *  * 
+ -  -  - 
+ *  -  * 
+"""
 
 
 

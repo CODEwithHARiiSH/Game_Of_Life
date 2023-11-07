@@ -34,6 +34,19 @@ def get_nextGeneration(grid):
                 if count_dead == 3:
                     new_generation[i][j] = 1
     return new_generation 
+    
+
+def show_display(grid):
+    display = ""
+    for row in grid:
+        for col in row:
+            if col == 1:
+                display += " * "
+            else:
+                display += " - "
+        display += '\n'
+    return display
+                
 
 
 
