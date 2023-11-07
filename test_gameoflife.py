@@ -44,4 +44,19 @@ def test_get_nextGeneration_case3():
                                         [1,0,0] , 
                                         [0,0,0]]
        
-    
+
+def test_get_nextGeneration_casedead():
+    grid = [[1,0,1] , 
+            [1,0,0] , 
+            [1,1,0]]
+    assert get_nextGeneration(grid) == [[0,0,0] , 
+                                        [1,1,0] , 
+                                        [1,1,0]]
+
+
+
+
+
+
+
+   
