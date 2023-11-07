@@ -20,7 +20,14 @@ def test_get_neighbor():
     y_cordinate = 1
     assert get_neighbor(grid , x_cordinate , y_cordinate) == [1,0,1,0,0,1,2,3]
     
-
+def test_get_nextGeneration_rule123():
+    grid = [[1,0,0] , 
+            [0,1,0] , 
+            [0,0,0]]
+    assert get_nextGeneration(grid) == [[0,0,0] , 
+                                        [0,0,0] , 
+                                        [0,0,0]]
+    
     
 
     
