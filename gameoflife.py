@@ -45,9 +45,9 @@ def show_display(grid):
     for row in grid:
         for col in row:
             if col == 1:
-                display += " * "
+                display += " # "
             else:
-                display += " - "
+                display += "   "
         display += '\n'
     return display
                 
