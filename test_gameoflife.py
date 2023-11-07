@@ -36,5 +36,12 @@ def test_get_nextGeneration_case2():
                                         [0,1,0] , 
                                         [0,0,0]]
        
-
+def test_get_nextGeneration_case3():
+    grid = [[1,0,1] , 
+            [1,1,0] , 
+            [0,0,1]]
+    assert get_nextGeneration(grid) == [[1,0,0] , 
+                                        [1,0,0] , 
+                                        [0,0,0]]
+       
     
