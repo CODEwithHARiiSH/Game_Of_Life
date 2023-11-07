@@ -1,7 +1,11 @@
-def generate_universe(rows , cols):
-    universe = []
-    for i in range(rows):
-        universe.append([0] * cols)
+import random
+def generate_universe(rows , cols, randomize=True):
+    if randomize:
+        universe = [[random.choice([0,1]) for i in range (cols)] for i in range(rows)]
+    else:
+        universe = []
+        for i in range(rows):
+            universe.append([0] * cols)
     return universe
     
 def get_neighbor(grid , x , y):
@@ -13,7 +17,7 @@ def get_neighbor(grid , x , y):
             x_neighbor = x+i
             y_neighbor = y+j
             if 0 <= x_neighbor < len(grid) and 0 <= y_neighbor < len(grid[0]):
-                neighbor.append(grid[x+i][y+j])
+                neighbor.append(grid[x_neighbor][y_neighbor])
     return neighbor
 
 def get_nextGeneration(grid):
@@ -25,7 +29,7 @@ def get_nextGeneration(grid):
             neighbor = get_neighbor(grid,i,j)
             count = sum(neighbor)
             count_dead = len(neighbor)-count
-            if grid[i][j]:
+            if grid[i][j] == 1:
                 if count in [2,3]:
                     new_generation[i][j] = 1
                 else:
