@@ -13,7 +13,11 @@ def get_neighbor(grid , x , y):
             neighbor.append(grid[x+i][y+j])
     return neighbor
 
-    
+def get_nextGeneration(grid):
+    new_generation =  [[0,0,0] , 
+                       [0,0,0] , 
+                       [0,0,0]]  
+    return new_generation 
 
 
 
