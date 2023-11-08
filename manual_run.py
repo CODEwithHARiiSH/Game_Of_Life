@@ -1,6 +1,5 @@
 from gameoflife import *
 import time
-import numpy as np
 
 def main():
     rows = 20

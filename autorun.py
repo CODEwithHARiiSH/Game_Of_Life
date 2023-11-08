@@ -1,11 +1,10 @@
 from gameoflife import *
 import time
-import numpy as np
 def main():
     rows = 20
     cols = 20
-    grid=generate_universe(rows,cols,randomize = True)
     zero_grid = generate_universe(rows,cols,randomize = False)
+    grid=generate_universe(rows,cols,randomize = True)
     running = True
     while running:
         show_display(grid)
