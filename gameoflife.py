@@ -1,5 +1,6 @@
 import random
 import numpy as np
+import os
 def generate_universe(rows , cols, randomize=True):
     if randomize:
         universe = [[random.choice([0,1]) for i in range (cols)] for i in range(rows)]
@@ -55,8 +56,74 @@ def show_display(grid):
             else:
                 display += dead_clr + dead 
         display += '\n'
+    os.system("clear")
+    print(display)
     return display
                 
+
+def get_user_input(rows,cols):
+    grid = generate_universe(rows , cols,randomize=False)
+    show_display(grid)
+    
+    print("Instructions:")
+    print("Press 'q' to quit.")
+    print("Use arrow keys to navigate the grid.")
+    print("Press 'space' to toggle cell state.")
+    
+    x, y = 0, 0  # Initial cursor position
+    
+    while True:
+        show_display(grid)
+        
+        key = input("Enter a command: ")
+        if key == "q":
+            print("Exiting the program.")
+            break
+        elif key == " ":
+            # Toggle cell state
+            grid[y][x] = 1 if grid[y][x] == 0 else 0
+        elif key == "\x1b[A":  # Up arrow
+            y = max(0, y - 1)
+        elif key == "\x1b[B":  # Down arrow
+            y = min(rows - 1, y + 1)
+        elif key == "\x1b[C":  # Right arrow
+            x = min(rows - 1, x + 1)
+        elif key == "\x1b[D":  # Left arrow
+            x = max(0, x - 1)
+    return grid
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
