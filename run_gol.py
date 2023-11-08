@@ -4,8 +4,8 @@ import numpy as np
 def main():
     rows = int(input("enter the rows--->"))
     cols = int(input("enter the columns--->"))
-    grid=generate_random_universe(rows,cols,randomize = True)
-    zero_grid = generate_random_universe(rows,cols,randomize = False)
+    grid=generate_universe(rows,cols,randomize = True)
+    zero_grid = generate_universe(rows,cols,randomize = False)
     running = True
     while running:
         print('\033c')
