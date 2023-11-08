@@ -44,17 +44,16 @@ def get_nextGeneration(grid):
 
 def show_display(grid):
     display = ""
-    alive = " ♥ "
-    dead = " ■ "
+    alive = " ■ "
+    dead = " ▢ "
     alive_clr = "\033[31m"
-    dead_clr = "\033[30m"
-    reset_clr = "\033[0m"
+    dead_clr = "\033[31m"
     for row in grid:
         for col in row:
             if col == 1:
-                display += alive_clr + alive + reset_clr
+                display += alive_clr + alive 
             else:
-                display += dead_clr + dead + reset_clr
+                display += dead_clr + dead 
         display += '\n'
     return display
                 

@@ -74,13 +74,12 @@ def test_show_display():
     assert show_display(grid) == ""
     
     grid = [[1,0,1]]
-    alive = " ♥ "
-    dead = " ■ "
+    alive = " ■ "
+    dead = " ▢ "
     alive_clr = "\033[31m"
-    dead_clr = "\033[30m"
-    reset_clr = "\033[0m"
+    dead_clr = "\033[31m"
     
-    assert show_display(grid) == f"{alive_clr}{alive}{reset_clr}{dead_clr}{dead}{reset_clr}{alive_clr}{alive}{reset_clr}\n"
+    assert show_display(grid) == f"{alive_clr}{alive}{dead_clr}{dead}{alive_clr}{alive}\n"
   
    
 
