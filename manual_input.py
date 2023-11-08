@@ -3,8 +3,8 @@ import time
 import numpy as np
 
 def main():
-    rows = int(input("enter the rows--->"))
-    cols = int(input("enter the columns--->"))
+    rows = 20
+    cols = 20
     zero_grid = generate_universe(rows,cols,randomize = False)
     grid = get_user_input(rows , cols)
     running = True

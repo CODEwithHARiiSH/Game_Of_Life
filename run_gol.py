@@ -2,8 +2,8 @@ from gameoflife import *
 import time
 import numpy as np
 def main():
-    rows = int(input("enter the rows--->"))
-    cols = int(input("enter the columns--->"))
+    rows = 20
+    cols = 20
     grid=generate_universe(rows,cols,randomize = True)
     zero_grid = generate_universe(rows,cols,randomize = False)
     running = True
