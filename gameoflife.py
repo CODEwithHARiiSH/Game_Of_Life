@@ -25,21 +25,20 @@ def get_nextGeneration(grid):
     new_generation=[]
     for i in range(len(grid)):
         new_generation.append([0] * len(grid[0]))
-    if grid == new_generation:
-        return new_generation
     for i in range(len(grid)):
         for j in range(len(grid[0])):
             neighbor = get_neighbor(grid,i,j)
             count = sum(neighbor)
-            count_dead = len(neighbor)-count
-            if grid[i][j] == 1:
+            if grid[i][j]:
                 if count in [2,3]:
                     new_generation[i][j] = 1
                 else:
                     new_generation[i][j] = 0
             else:
-                if count_dead == 3:
+                if count == 3:
                     new_generation[i][j] = 1
+                else:
+                    new_generation[i][j] =0
     return new_generation 
     
 
