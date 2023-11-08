@@ -59,7 +59,14 @@ def test_get_nextGeneration_case4():
     assert get_nextGeneration(grid) == [[0,0,0] , 
                                         [1,1,1] , 
                                         [1,1,0]]
-                                        
+
+def test_get_nextGeneration_Alldead():
+    grid = [[0,0,0] , 
+            [0,0,0] , 
+            [0,0,0]]
+    assert get_nextGeneration(grid) == [[0,0,0] , 
+                                        [0,0,0] , 
+                                        [0,0,0]]                                        
                                         
 def test_show_display():
     grid = [[1,1,1] , 
