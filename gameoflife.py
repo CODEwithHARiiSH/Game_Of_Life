@@ -1,5 +1,4 @@
 import random
-import numpy as np
 import os
 def generate_universe(rows , cols, randomize=True):
     if randomize:
