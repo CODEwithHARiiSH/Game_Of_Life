@@ -1,4 +1,5 @@
 import random
+import numpy as np
 def generate_universe(rows , cols, randomize=True):
     if randomize:
         universe = [[random.choice([0,1]) for i in range (cols)] for i in range(rows)]
@@ -24,6 +25,8 @@ def get_nextGeneration(grid):
     new_generation=[]
     for i in range(len(grid)):
         new_generation.append([0] * len(grid[0]))
+    if grid == new_generation:
+        return new_generation
     for i in range(len(grid)):
         for j in range(len(grid[0])):
             neighbor = get_neighbor(grid,i,j)
