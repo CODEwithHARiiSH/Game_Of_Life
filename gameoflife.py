@@ -80,15 +80,16 @@ def get_user_input(rows,cols):
             print("Exiting the program.")
             break
         elif key == " ":
-            # Toggle cell state
+            # Toggele between alive and dead
             grid[y][x] = 1 if grid[y][x] == 0 else 0
-        elif key == "\x1b[A":  # Up arrow
+            # Navigation
+        elif key == "\x1b[A":  
             y = max(0, y - 1)
-        elif key == "\x1b[B":  # Down arrow
+        elif key == "\x1b[B": 
             y = min(rows - 1, y + 1)
-        elif key == "\x1b[C":  # Right arrow
+        elif key == "\x1b[C":  
             x = min(rows - 1, x + 1)
-        elif key == "\x1b[D":  # Left arrow
+        elif key == "\x1b[D": 
             x = max(0, x - 1)
     return grid
 
