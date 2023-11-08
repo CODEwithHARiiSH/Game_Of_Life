@@ -1,12 +1,25 @@
 import random
 import numpy as np
-def generate_universe(rows , cols, randomize=True):
+def generate_random_universe(rows , cols, randomize=True):
     if randomize:
         universe = [[random.choice([0,1]) for i in range (cols)] for i in range(rows)]
     else:
         universe = []
         for i in range(rows):
             universe.append([0] * cols)
+    return universe
+    
+def generate_universe(rows , cols,x_cordinates,y_cordinates):
+    universe = []
+    for i in range(rows):
+        universe.append([0] * cols)
+    run = len(x_cordinates)
+    i=0
+    while i<run:
+        x=x_cordinates.pop()
+        y=y_cordinates.pop()
+        universe[x][y] = 1
+        i+=1
     return universe
     
 def get_neighbor(grid , x , y):
