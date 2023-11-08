@@ -10,10 +10,8 @@ A living cell will survive into the next generation by default, unless:
 A dead cell will spring to life if it has exactly three live neighbours (reproduction).
 
 
-Implementation
+Source code is gameoflife.py 
+* Use autorun.py for selecting grid randomly
+* use manual_run.py for manualy making the grid
 
-1. Intilize an empty universe.
-2. Set cells in the universe.
-3. Determine if a given cell survives to the next iteration, based on its neighbours.
-4. Iterate the function.
-5. Iterate steps 3–4 for the desired number of generations.
+The coverage for gameoflife.py and test_gameoflife.py is 89%
