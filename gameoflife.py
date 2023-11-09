@@ -64,16 +64,16 @@ def get_user_input(rows,cols):
     grid = generate_universe(rows , cols,randomize=False)
     show_display(grid)
     
-    print("Instructions:")
-    print("Press 'q' to quit.")
-    print("Use arrow keys to navigate the grid.")
-    print("Press 'space' to toggle cell state.")
-    
     x, y = 0, 0  # Initial cursor position
     
     while True:
         show_display(grid)
-        
+        print("Instructions:")
+        print("--------------------------------------")
+        print("Press 'q' to quit")
+        print("Use arrow keys to navigate the grid.")
+        print("Press 'space' to toggle cell state.")
+        print("--------------------------------------")
         key = input("Enter a command: ")
         if key == "q":
             print("Exiting the program.")
