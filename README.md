@@ -11,8 +11,9 @@ Rules
 
 
 * Source code is gameoflife.py 
-* Use autorun.py for selecting grid randomly
-* use manual_run.py for manualy making the grid
+* Use run_GOL.py file for running the code.
+   * Instructions will be printed on the screen
+   * 1 for auto intilizing grid and 2 for manual selecting grid
 
 The coverage for gameoflife.py and test_gameoflife.py is 100%
 
